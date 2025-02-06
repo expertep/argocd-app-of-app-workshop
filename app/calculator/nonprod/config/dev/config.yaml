@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: calculator-config-nonprd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:expertep/ui-app-config.git
+    targetRevision: main
+    path: manifest/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: calculator-nonprd-dev
+  syncPolicy:
+    automated:
+      prune: true

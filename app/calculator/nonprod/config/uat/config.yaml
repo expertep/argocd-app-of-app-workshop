@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:miw1513/k8s-calculator-config-nonprd.git
+    repoURL: git@github.com:expertep/k8s-calculator-config-nonprd.git
     targetRevision: main
     path: manifest/uat
   destination:
-    server: https://kubernetes.default.svc
-    namespace: calculator-nonprd-uat
+    server: https://34.142.138.192
+    namespace: kev-uat
   syncPolicy:
     automated:
       prune: true

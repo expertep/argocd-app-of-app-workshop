@@ -7,15 +7,15 @@ spec:
   project: default
   source:
     path: ./
-    repoURL: git@github.com:miw1513/k8s-calculator-nonprd.git
+    repoURL: git@github.com:expertep/k8s-calculator-nonprd.git
     targetRevision: main
     helm:
       releaseName: calculator-nonprd-dev
       valueFiles:
         - ./helm-values/dev.yaml
   destination:
-    server: https://kubernetes.default.svc
-    namespace: calculator-nonprd-dev
+    server: https://34.142.138.192
+    namespace: kev-dev
   syncPolicy:
     automated:
       prune: true
